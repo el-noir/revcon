@@ -34,9 +34,7 @@ hermes profile revcon
 
 ## Architecture
 
-A visual architecture diagram is included in this repo:
-
-- `ARCHITECTURE.html` — Open in a browser to view the interactive dark-themed SVG diagram.
+![RevCon Architecture Diagram](ARCHITECTURE.png)
 
 ```
   User
