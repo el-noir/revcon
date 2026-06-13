@@ -1,0 +1,45 @@
+model:
+  provider: kimi-coding
+  default: kimi-k2.6
+  base_url: ''
+_config_version: 29
+agent:
+  disabled_toolsets:
+  - code_execution
+  - vision
+  - image_gen
+  - tts
+  - session_search
+  - clarify
+  - delegation
+  - cronjob
+  - messaging
+  - computer_use
+toolsets:
+- web
+- browser
+- file
+- skills
+- kanban
+- memory
+platform_toolsets:
+  cli:
+  - web
+  - browser
+  - file
+  - skills
+  - kanban
+  - memory
+web:
+  backend: firecrawl
+  use_gateway: true
+terminal:
+  backend: local
+  cwd: /home/el-noir/.hermes/profiles/osint_analyst/workspace
+  timeout: 180
+delegation:
+  child_timeout_seconds: 0
+  max_iterations: 50
+approvals:
+  mode: auto
+  timeout: 60
