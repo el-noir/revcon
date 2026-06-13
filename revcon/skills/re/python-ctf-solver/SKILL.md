@@ -91,7 +91,7 @@ Use this skill when:
   4. If all else fails, be honest: "I cannot execute this script in my environment. Please run it manually:" and show the complete script
 
 - **Execution via cronjob with no_agent=True + file output**: When you need guaranteed execution and chat delivery is unreliable:
-  1. Write a script that writes its results to a known file path (e.g., `/mnt/d/Internship/test/hermes-myagent-workspace/flag_result.txt`)
+  1. Write a script that writes its results to a known file path (e.g., `/mnt/d/Internship/test/hermes-revcon-workspace/flag_result.txt`)
   2. Place the script in `~/.hermes/scripts/` (required for no_agent=True cronjobs)
   3. Create a cronjob with `no_agent=True`, `script=<filename>` (no .py extension needed), `deliver='origin'`
   4. The script's stdout will be delivered to chat. If it writes to a file, you can `read_file` that path after the job runs

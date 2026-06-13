@@ -15,7 +15,7 @@ Read the server's bridge script directly and extract function names from
 
 - `/mnt/c/Users/el-noir/Downloads/GhidraMCP-release-1-4/GhidraMCP-release-1-4/bridge_mcp_ghidra.py`
 - `/home/el-noir/.hermes/config.yaml`
-- `/home/el-noir/.hermes/profiles/myagent/config.yaml`
+- `/home/el-noir/.hermes/profiles/revcon/config.yaml`
 
 ## Config pattern / tool discovery
 
