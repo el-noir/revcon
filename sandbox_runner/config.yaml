@@ -1,0 +1,55 @@
+model:
+  provider: kimi-coding
+  default: kimi-k2.6
+  base_url: ''
+_config_version: 29
+agent:
+  disabled_toolsets:
+  - browser
+  - vision
+  - image_gen
+  - tts
+  - session_search
+  - clarify
+  - delegation
+  - cronjob
+  - messaging
+  - computer_use
+toolsets:
+- terminal
+- file
+- code_execution
+- web
+- skills
+- kanban
+- memory
+platform_toolsets:
+  cli:
+  - terminal
+  - file
+  - code_execution
+  - web
+  - skills
+  - kanban
+  - memory
+terminal:
+  backend: local
+  modal_mode: auto
+  modal_image: pwntools/pwntools:stable
+  docker_image: sandbox-ctf:latest
+  cwd: /workspace
+  timeout: 300
+  container_cpu: 2
+  container_memory: 8192
+  container_disk: 51200
+  container_persistent: true
+code_execution:
+  mode: native
+  max_tool_calls: 50
+  timeout: 300
+delegation:
+  child_timeout_seconds: 0
+  max_iterations: 50
+approvals:
+  mode: auto
+  timeout: 60

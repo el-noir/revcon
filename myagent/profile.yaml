@@ -1,0 +1,2 @@
+description: Reverse engineering orchestrator. Decomposes malware/CTF reversing tasks into Kanban cards, assigns static work to static_analyst, dynamic execution to sandbox_runner, OSINT to osint_analyst, and synthesizes final reports.
+description_auto: false
