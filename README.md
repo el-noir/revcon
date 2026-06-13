@@ -15,7 +15,7 @@ cp -R /tmp/hermes-profiles/* ~/.hermes/profiles/
 
 After copying:
 ```bash
-hermes profile myagent
+hermes profile revcon
 ```
 
 ---
@@ -24,7 +24,7 @@ hermes profile myagent
 
 | Directory | Role |
 |-----------|------|
-| `myagent/` | Orchestrator. Decomposes tasks into Kanban cards and delegates to subagents. |
+| `revcon/` | Orchestrator. Decomposes tasks into Kanban cards and delegates to subagents. |
 | `static_analyst/` | Static binary, bytecode, and firmware analysis. |
 | `sandbox_runner/` | Dynamic execution, sandboxed runtime, and fuzzing harnesses. |
 | `osint_analyst/` | OSINT, reconnaissance, and threat-intel gathering. |
@@ -38,7 +38,7 @@ hermes profile myagent
   User
     |
     v
-  myagent (orchestrator)
+  revcon (orchestrator)
     |
     +---> static_analyst  (static analysis)
     +---> sandbox_runner   (dynamic / runtime)
@@ -49,7 +49,7 @@ hermes profile myagent
   Final synthesized report
 ```
 
-`myagent` uses Hermes Kanban to assign cards to subagents, collects results, and produces the final report.
+`revcon` uses Hermes Kanban to assign cards to subagents, collects results, and produces the final report.
 
 ---
 
@@ -92,9 +92,9 @@ All profiles ship the full bundled skill tree (~500 files). Categories include:
 - Hermes Agent installed
 - Profiles enabled in Hermes config (default: `~/.hermes/profiles/`)
 - Optional for subagent workflows:
-  - Docker / Singularity / Modal configured in `myagent/config.yaml`
+  - Docker / Singularity / Modal configured in `revcon/config.yaml`
   - Sandbox image built (e.g. `sandbox-ctf:latest`)
-  - `tirith` binary placed in `myagent/bin/` and each subagent `bin/` if security scanning is desired
+  - `tirith` binary placed in `revcon/bin/` and each subagent `bin/` if security scanning is desired
 
 ---
 
@@ -107,9 +107,9 @@ All profiles ship the full bundled skill tree (~500 files). Categories include:
 3. Deploy runtime tools:
    - Build sandbox image.
    - Place `tirith` if using built-in scanning.
-4. Switch to `myagent`:
+4. Switch to `revcon`:
    ```bash
-   hermes profile myagent
+   hermes profile revcon
    ```
 5. Run a test delegation to verify subagent cards appear and complete.
 

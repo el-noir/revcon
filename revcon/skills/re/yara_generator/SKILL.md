@@ -26,7 +26,7 @@ Use the following format for the rule:
 rule <Malware_Family_Name> {
     meta:
         description = "Detects <Malware_Family_Name> based on custom decryption loop and strings"
-        author = "myagent"
+        author = "revcon"
         date = "<CURRENT_DATE>"
         hash = "<SHA256_HASH_IF_KNOWN>"
     

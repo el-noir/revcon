@@ -473,7 +473,7 @@ kanban:
   worker_log_rotate_bytes: 2097152
   worker_log_backup_count: 1
   orchestrator_profile: ''
-  default_assignee: myagent
+  default_assignee: revcon
   max_in_progress_per_profile: null
   auto_decompose: true
   auto_decompose_per_tick: 3
@@ -562,7 +562,7 @@ mcp_servers:
     - -y
     - '@modelcontextprotocol/server-filesystem'
     - /home/el-noir/hermes-agent
-    - /home/el-noir/.hermes/profiles/myagent/scripts
+    - /home/el-noir/.hermes/profiles/revcon/scripts
     command: cmd.exe
     enabled: false
   gdb:
@@ -584,7 +584,7 @@ plugins:
   - observability/langfuse
   hermes-memory-store:
     auto_extract: 'true'
-    db_path: ~/.hermes/profiles/myagent/memory_store.db
+    db_path: ~/.hermes/profiles/revcon/memory_store.db
     default_trust: '0.5'
     hrr_dim: '1024'
 session_reset:

@@ -312,7 +312,7 @@ image_gen:
 kanban:
   auto_decompose: true
   auto_decompose_per_tick: 3
-  default_assignee: myagent
+  default_assignee: revcon
   dispatch_in_gateway: true
   dispatch_interval_seconds: 30
   dispatch_stale_timeout_seconds: 14400
@@ -391,7 +391,7 @@ plugins:
   - observability/langfuse
   hermes-memory-store:
     auto_extract: 'true'
-    db_path: ~/.hermes/profiles/myagent/memory_store.db
+    db_path: ~/.hermes/profiles/revcon/memory_store.db
     default_trust: '0.5'
     hrr_dim: '1024'
 prefill_messages_file: ''
